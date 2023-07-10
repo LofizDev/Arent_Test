@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../layout'
 import RecordCategory from '../components/RecordCategory'
 import Chart from '../components/Chart'
-
+import MyDiary from '../components/MyDiary'
+import { diaries } from '../../mock/diaries'
+import LinearButton from '../components/LinearButton'
 function Records() {
+    const [lastPage, setLastPage] = useState<number>(8)
     const dateType = ['日', '週', '月', '年']
     const [type, setType] = useState<string>('日')
 
@@ -58,6 +61,21 @@ function Records() {
                             {date}
                         </span>
                     ))}
+                </div>
+            </div>
+            <div className='lg:w-[960px] w-full mt-[50px] mx-auto'>
+                <h1 className='uppercase text-dark-500 text-[23px] '>my diary</h1>
+                <div className='lg:grid-cols-4 grid md:px-0 px-3 mx-auto gap-4 grid-cols-2 md:grid-cols-3'>
+                    {diaries.slice(0, lastPage).map(e => (
+                        <MyDiary
+                            date={e.date}
+                            time={e.time}
+                            content={e.content}
+                        />
+                    ))}
+                </div>
+                <div className='mx-auto mt-5 w-full  flex justify-center' onClick={() => setLastPage(lastPage + 8)}>
+                    <LinearButton name='自分の日記をもっと見る' />
                 </div>
             </div>
         </Layout>
