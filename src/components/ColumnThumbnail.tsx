@@ -44,12 +44,12 @@ function ColumnThumbnail(props: Iprops) {
       break;
   }
   return (
-    <div className="ColumnThumbnail w-[234px] mt-6 relative pr-2">
+    <div className="ColumnThumbnail w-full mt-6 relative pr-2">
       <div className="relative">
         <img
           src={image}
           alt="column-thumbnail"
-          className="w-[234px] h-[144px] object-cover"
+          className="w-full h-[144px] object-cover"
         />
         <div className="absolute bottom-0 border border-primary-300 bg-primary-300 text-white px-1">{time}</div>
       </div>
