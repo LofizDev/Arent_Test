@@ -3,12 +3,13 @@ import knife from "/assets/knife.svg";
 import linearHexagon from "/assets/linearHexagon.svg";
 interface Iprops {
   name: string,
-  type: string
+  type: string,
+  onClick: () => void
 }
 function Hexagon(props: Iprops) {
-  const { name, type } = props
+  const { name, type, onClick } = props
   return (
-    <div className="Hexagon relative">
+    <div onClick={() => onClick()} className="Hexagon relative">
       <img src={linearHexagon} alt="linearHexagon" />
       {type == 'cup' && <img src={cup} alt="cup" className="absolute top-[24px] left-[30px]" />}
       {type == 'knife' && <img src={knife} alt="knife" className="absolute top-[24px] left-[30px]" />}
