@@ -20,7 +20,7 @@ function HomePage() {
                 <div className='lg:w-[960px] w-full mt-[50px] flex flex-col md:px-0 px-4 items-center mx-auto'>
                     <div className='gap-[6px] grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3'>
                         {meal.filter(el => active !== 'all' ? el.category == active : true).slice(0, expand ? meal.length : 8).map(e => (
-                            <FoodInfo title={e.title} url={e.url} />
+                            <FoodInfo key={e.url} title={e.title} url={e.url} />
                         ))}
                     </div>
                     {!expand && (
