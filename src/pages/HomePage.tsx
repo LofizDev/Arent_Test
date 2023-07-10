@@ -13,8 +13,8 @@ function HomePage() {
                     <Hexagon onClick={() => setActive(e.name)} key={e.name} type={e.type} name={e.name} />
                 ))}
             </div>
-            <div className='w-[960px] mt-[50px] flex flex-col items-center mx-auto'>
-                <div className='gap-[6px] grid grid-cols-4'>
+            <div className='lg:w-[960px] w-full mt-[50px] flex flex-col md:px-0 px-4 items-center mx-auto'>
+                <div className='gap-[6px] grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3'>
                     {meal.filter(el => active !== 'all' ? el.category == active : true).slice(0, expand ? meal.length : 8).map(e => (
                         <FoodInfo title={e.title} url={e.url} />
                     ))}
