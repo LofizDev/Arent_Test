@@ -16,14 +16,20 @@ function Dropdown({ children, open, elements }: Props) {
             return item == "コラム一覧" ? (
               <li
                 key={index}
-                className="px-8 py-5 border-y-[0.1px] border-dark-500 cursor-pointer hover:text-primary-400"
+                className="px-8 py-5 cursor-pointer hover:text-primary-400"
+                style={{
+                  boxShadow:'0px -0.5px 2px 0px #414141'
+                }}
               >
                 <a href='/column'>{item}</a>
               </li>
             ) : (
               <li
                 key={index}
-                className="px-8 py-5 border-y-[0.1px] border-dark-500 cursor-pointer hover:text-primary-400"
+                className="px-8 py-5 cursor-pointer hover:text-primary-400"
+                style={{
+                  boxShadow:'0px -0.5px 2px 0px #414141'
+                }}
               >
                 {item}
               </li>

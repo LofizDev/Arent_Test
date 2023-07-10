@@ -41,8 +41,8 @@ function HomePage() {
             {meal
               .filter((el) => (active !== "all" ? el.category == active : true))
               .slice(0, expand ? meal.length : 8)
-              .map((e) => (
-                <FoodInfo key={e.url} title={e.title} url={e.url} />
+              .map((e, i) => (
+                <FoodInfo key={i} title={e.title} url={e.url} />
               ))}
           </div>
           {!expand && (
