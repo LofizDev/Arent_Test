@@ -2,6 +2,7 @@ import Hexagon from "../components/Hexagon";
 import LinearButton from "../components/LinearButton";
 import RecordCategory from "../components/RecordCategory";
 import ColumnThumbnail from "../components/ColumnThumbnail";
+import RecommendColumn from "../components/RecommendColumn";
 
 function TestComponent() {
   return (
@@ -51,6 +52,8 @@ function TestComponent() {
           type="4"
         />
       </div>
+      <br></br><br></br><br></br><br></br><br></br>
+      <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ" />
     </div>
   );
 }
