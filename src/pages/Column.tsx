@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LinearButton from "../components/LinearButton";
 import ColumnThumbnail from "../components/ColumnThumbnail";
 import RecommendColumn from "../components/RecommendColumn";
@@ -5,6 +6,7 @@ import Layout from "../layout";
 import columnData from '../../mock/thumbnail.json';
 
 function Column() {
+  const [expand, setExpand] = useState<boolean>(false);
   return (
     <Layout>
       <div className="Column">
@@ -32,7 +34,7 @@ function Column() {
           style={{ margin: "0 auto" }}
         >
           {
-            columnData.extraThumbnail.map((item) => {
+            columnData.extraThumbnail.slice(0, expand ? columnData.extraThumbnail.length : 4).map((item) => {
               return <ColumnThumbnail
               key={item.type}
               name={item.name}
@@ -42,9 +44,9 @@ function Column() {
             })
           }
         </div>
-        <div className="flex justify-center py-4">
+        {!expand && <div onClick={() => setExpand(true)} className="flex justify-center py-4">
           <LinearButton name="コラムをもっと見る" />
-        </div>
+        </div>}
       </div>
     </Layout>
   );
