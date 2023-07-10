@@ -3,11 +3,13 @@ import FoodInfo from '../components/FoodInfo'
 import Hexagon from '../components/Hexagon'
 import { categories, meal } from '../../mock/foods'
 import LinearButton from '../components/LinearButton'
+import Chart from '../components/Chart'
 function HomePage() {
     const [expand, setExpand] = useState<boolean>(false)
     const [active, setActive] = useState<string>('all')
     return (
         <div>
+            <Chart />
             <div className='flex mx-auto cursor-pointer items-center w-[700px] justify-between'>
                 {categories.map(e => (
                     <Hexagon onClick={() => setActive(e.name)} key={e.name} type={e.type} name={e.name} />
