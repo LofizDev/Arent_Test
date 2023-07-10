@@ -7,8 +7,8 @@ function Footer() {
         <div className='h-[128px] bg-dark-600'>
             <div className='w-3/4 h-full text-light m-auto flex items-center'>
                 {
-                    FOOTER_DATA.map((item) => {
-                        return <a href='#' className='mr-10'>
+                    FOOTER_DATA.map((item, index) => {
+                        return <a key={index} href='#' className='mr-10'>
                             {item}
                         </a>
                     })
