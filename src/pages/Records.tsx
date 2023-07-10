@@ -9,10 +9,9 @@ function Records() {
     const [lastPage, setLastPage] = useState<number>(8)
     const dateType = ['日', '週', '月', '年']
     const [type, setType] = useState<string>('日')
-
     const [data, setData] = useState<{ data1: number[], data2: number[] }>({ data1: [], data2: [] })
-    useEffect(() => {
 
+    useEffect(() => {
         switch (type) {
             case '日':
                 setData({ data1: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6], data2: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8] })
@@ -34,7 +33,7 @@ function Records() {
     return (
         <Layout>
             <div className="flex my-[50px] lg:w-[960px] lg:px-0 px-3 w-full justify-between mx-auto">
-                <div className='grid lg:grid-cols-3 gap-2 grid-cols-2'>
+                <div className='grid lg:grid-cols-3 cursor-pointer gap-2 grid-cols-2'>
                     <RecordCategory
                         name="BODY RECORD"
                         description="自分のカラダの記録"

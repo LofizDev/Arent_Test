@@ -44,7 +44,7 @@ function ColumnThumbnail(props: Iprops) {
       break;
   }
   return (
-    <div className="ColumnThumbnail w-full mt-6 relative pr-2">
+    <div className="ColumnThumbnail cursor-pointer w-full mt-6 relative pr-2">
       <div className="relative">
         <img
           src={image}
