@@ -10,20 +10,20 @@ interface Iprops {
 function RecordCategory(props: Iprops) {
   const { name, description, type } = props;
   return (
-    <div className="RecordCategory w-[288px] h-[288px] bg-yellow-400 p-6">
+    <div className="RecordCategory w-full object-cover h-[288px] bg-yellow-400 p-6">
       <div className="relative">
         <img
           src={
             type == "1"
               ? MyRecommend1
               : type == "2"
-              ? MyRecommend2
-              : MyRecommend3
+                ? MyRecommend2
+                : MyRecommend3
           }
           alt="My-Recommend"
-          className="w-[240px] h-[240px] object-cover"
+          className="w-full h-[240px] object-cover"
         />
-        <div className="absolute top-0 left-0 w-[240px] h-[240px] bg-black opacity-70"></div>
+        <div className="absolute top-0 left-0 w-full h-[240px] bg-black opacity-70"></div>
         <div className="text-center absolute top-[40%] w-full">
           <div className="uppercase text-primary-300 text-2xl pb-2">{name}</div>
           <div className="flex justify-center">

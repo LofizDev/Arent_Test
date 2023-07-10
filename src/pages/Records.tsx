@@ -30,20 +30,22 @@ function Records() {
 
     return (
         <Layout>
-            <div className="flex my-[50px] w-[960px] justify-between mx-auto">
-                <RecordCategory
-                    name="BODY RECORD"
-                    description="自分のカラダの記録"
-                    type="1"
-                />
-                <RecordCategory
-                    name="MY EXERCISE"
-                    description="自分の運動の記録"
-                    type="2"
-                />
-                <RecordCategory name="MY DIARY" description="自分の日記" type="3" />
+            <div className="flex my-[50px] lg:w-[960px] lg:px-0 px-3 w-full justify-between mx-auto">
+                <div className='grid lg:grid-cols-3 gap-2 grid-cols-2'>
+                    <RecordCategory
+                        name="BODY RECORD"
+                        description="自分のカラダの記録"
+                        type="1"
+                    />
+                    <RecordCategory
+                        name="MY EXERCISE"
+                        description="自分の運動の記録"
+                        type="2"
+                    />
+                    <RecordCategory name="MY DIARY" description="自分の日記" type="3" />
+                </div>
             </div>
-            <div className='w-[960px] bg-[#2E2E2E] mx-auto '>
+            <div className='lg:w-[960px] w-full lg:px-0 px-3 bg-[#2E2E2E] mx-auto '>
                 <div className='px-5 flex items-center gap-1 py-3'>
                     <span className='font-inter text-[15px] text-white '>BODY <br /> RECORD</span>
                     <p className='text-white font-inter text-[15px] ml-2'>2021.05.21</p>
