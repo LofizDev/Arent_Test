@@ -15,7 +15,7 @@ function HomePage() {
     return (
         <Layout>
             <div>
-                <div className="flex">
+                <div className="flex w-full">
                     <div className="flex-[40%] relative">
                         <img src={d01} alt="d01" className="w-full object-cover h-[400px]" />
                         <img src={threefour} alt="threefour" className="absolute top-[25%] left-[35%]" />
@@ -24,11 +24,11 @@ function HomePage() {
                             <div className="text-2xl">75%</div>
                         </div>
                     </div>
-                    <div className="flex-[60%]">
+                    <div className="lg:flex-[60%] w-full">
                         <Chart data={data} />
                     </div>
                 </div>
-                <div className="flex mx-auto cursor-pointer items-center w-[700px] justify-between mt-10">
+                <div className="flex mx-auto cursor-pointer items-center lg:w-[700px] gap-2 w-[95%] justify-between mt-10">
                     {categories.map((e) => (
                         <Hexagon
                             onClick={() => setActive(e.name)}
