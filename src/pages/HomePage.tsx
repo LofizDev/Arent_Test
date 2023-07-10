@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import FoodInfo from "../components/FoodInfo";
 import Hexagon from "../components/Hexagon";
 import { categories, meal } from "../../mock/foods";
