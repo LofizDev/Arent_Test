@@ -21,7 +21,7 @@ function RecordCategory(props: Iprops) {
               : MyRecommend3
           }
           alt="My-Recommend"
-          className="w-[240px] h-[240px]"
+          className="w-[240px] h-[240px] object-cover"
         />
         <div className="absolute top-0 left-0 w-[240px] h-[240px] bg-black opacity-70"></div>
         <div className="text-center absolute top-[40%] w-full">
