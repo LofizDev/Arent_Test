@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Layout from '../layout'
 import RecordCategory from '../components/RecordCategory'
 import Chart from '../components/Chart'
