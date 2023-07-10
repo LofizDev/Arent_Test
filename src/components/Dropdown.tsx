@@ -18,17 +18,27 @@ function Dropdown({ children, open, elements }: Props) {
                 key={index}
                 className="px-8 py-5 cursor-pointer hover:text-primary-400"
                 style={{
-                  boxShadow:'0px -0.5px 2px 0px #414141'
+                  boxShadow: "0px -0.5px 2px 0px #414141",
                 }}
               >
-                <a href='/column'>{item}</a>
+                <a href="/column">{item}</a>
+              </li>
+            ) : item == "自分の記録" ? (
+              <li
+                key={index}
+                className="px-8 py-5 cursor-pointer hover:text-primary-400"
+                style={{
+                  boxShadow: "0px -0.5px 2px 0px #414141",
+                }}
+              >
+                <a href="/records">{item}</a>
               </li>
             ) : (
               <li
                 key={index}
                 className="px-8 py-5 cursor-pointer hover:text-primary-400"
                 style={{
-                  boxShadow:'0px -0.5px 2px 0px #414141'
+                  boxShadow: "0px -0.5px 2px 0px #414141",
                 }}
               >
                 {item}
