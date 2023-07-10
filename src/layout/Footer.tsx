@@ -3,7 +3,7 @@ const FOOTER_DATA = ['会員登録', '運営会社', '利用規約', '個人情�
 
 function Footer() {
     return (
-        <div className='h-[128px] bg-dark-600'>
+        <div className='h-[128px] bg-dark-600 mt-10'>
             <div className='w-3/4 h-full text-light m-auto flex items-center'>
                 {
                     FOOTER_DATA.map((item, index) => {

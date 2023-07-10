@@ -12,7 +12,7 @@ function HomePage() {
         <Layout>
             <div>
                 <Chart />
-                <div className='flex mx-auto cursor-pointer items-center w-[700px] justify-between'>
+                <div className='flex mx-auto cursor-pointer items-center w-[700px] justify-between mt-10'>
                     {categories.map(e => (
                         <Hexagon onClick={() => setActive(e.name)} key={e.name} type={e.type} name={e.name} />
                     ))}
