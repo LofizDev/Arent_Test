@@ -93,12 +93,12 @@ export const meal = [
   },
   {
     category: 'Snack',
-    title: '05.21.Morning',
+    title: '05.21.Snack',
     url: l02,
   },
   {
     category: 'Snack',
-    title: '05.21.Morning',
+    title: '05.21.Snack',
     url: l01,
   },
 ];
