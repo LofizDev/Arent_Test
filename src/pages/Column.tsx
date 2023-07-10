@@ -1,10 +1,11 @@
 import LinearButton from "../components/LinearButton";
 import ColumnThumbnail from "../components/ColumnThumbnail";
 import RecommendColumn from "../components/RecommendColumn";
+import Layout from "../layout";
 
 function Column() {
   return (
-    <div className="Column">
+  <div className="Column">
       <div
         className="flex justify-around w-4/6 py-12 flex-wrap"
         style={{ margin: "0 auto" }}

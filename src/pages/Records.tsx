@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../layout'
 
 function Records() {
     return (
-        <div>Records</div>
+        <Layout>
+            <div>Records</div>
+        </Layout>
     )
 }
 
