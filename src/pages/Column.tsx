@@ -9,38 +9,33 @@ function Column() {
   const [expand, setExpand] = useState<boolean>(false);
   return (
     <Layout>
-      <div className="Column">
+      <div className="Column lg:w-[960px] w-full lg:px-0 px-4 mt-5 mx-auto">
         <div
-          className="flex justify-around w-4/6 py-12 flex-wrap"
-          style={{ margin: "0 auto" }}
+          className="grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3 "
         >
           {columnData.recomends.map((recomend, index) => <RecommendColumn key={index} name={recomend.name} description={recomend.description} />)}
         </div>
         <div
-          className="flex justify-around w-4/6 pb-20 flex-wrap"
-          style={{ margin: "0 auto" }}
+          className="grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3 mt-6"
         >
           {columnData.thumbnail.map((item) => {
             return <ColumnThumbnail
-            key={item.type}
-            name={item.name}
-            time={item.time}
-            type={item.type}
-          />
-          })}
-        </div>
-        <div
-          className="flex justify-around w-4/6 pb-20 flex-wrap"
-          style={{ margin: "0 auto" }}
-        >
-          {
-            columnData.extraThumbnail.slice(0, expand ? columnData.extraThumbnail.length : 4).map((item) => {
-              return <ColumnThumbnail
               key={item.type}
               name={item.name}
               time={item.time}
               type={item.type}
             />
+          })}
+        </div>
+        <div className="grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3 ">
+          {
+            columnData.extraThumbnail.map((item) => {
+              return <ColumnThumbnail
+                key={item.type}
+                name={item.name}
+                time={item.time}
+                type={item.type}
+              />
             })
           }
         </div>

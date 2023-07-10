@@ -1,44 +1,44 @@
-{   
-    "recomends": [
-        {
-            "name": "RECOMMENDED COLUMN",
-            "description": "オススメ"
-        },
-        {
-            "name": "RECOMMENDED COLUMN",
-            "description": "オススメ"
-        },
-        {
-            "name": "RECOMMENDED COLUMN",
-            "description": "オススメ"
-        },
-        {
-            "name": "RECOMMENDED COLUMN",
-            "description": "オススメ"
-        }
-    ],
-    "thumbnail": [
-        {
-        "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    "time": "2021.05.17  23:25",
-    "type": "1"
+{
+  "recomends": [
+    {
+      "name": "RECOMMENDED COLUMN",
+      "description": "オススメ"
     },
-        {
-        "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    "time": "2021.05.17  23:25",
-    "type": "2"
+    {
+      "name": "RECOMMENDED DIET",
+      "description": "ダイエット"
     },
-        {
-        "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    "time": "2021.05.17  23:25",
-    "type": "3"
+    {
+      "name": "RECOMMENDED BEAUTY",
+      "description": "美容"
     },
-        {
-        "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    "time": "2021.05.17  23:25",
-    "type": "4"
+    {
+      "name": "RECOMMENDED HEALTH",
+      "description": "健康"
     }
 ],
+"thumbnail": [
+    {
+      "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
+      "time": "2021.05.17  23:25",
+      "type": "1"
+    },
+    {
+      "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
+      "time": "2021.05.17  23:25",
+      "type": "2"
+    },
+    {
+      "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
+      "time": "2021.05.17  23:25",
+      "type": "3"
+    },
+    {
+      "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
+      "time": "2021.05.17  23:25",
+      "type": "4"
+    }
+  ],
     "extraThumbnail": [
         {
             "name": "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
