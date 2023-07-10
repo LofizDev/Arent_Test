@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Layout from '../layout'
 import RecordCategory from '../components/RecordCategory'
 import Chart from '../components/Chart'
 import MyDiary from '../components/MyDiary'
 import { diaries } from '../../mock/diaries'
 import LinearButton from '../components/LinearButton'
+import ExerciseList from '../components/ExerciseList'
+
 function Records() {
     const [lastPage, setLastPage] = useState<number>(8)
     const dateType = ['日', '週', '月', '年']
@@ -61,6 +63,9 @@ function Records() {
                         </span>
                     ))}
                 </div>
+            </div>
+            <div className='lg:w-[960px] w-full lg:px-0 mt-[50px] px-3 bg-dark-500 mx-auto'>
+                <ExerciseList/>
             </div>
             <div className='lg:w-[960px] w-full mt-[50px] mx-auto'>
                 <h1 className='uppercase text-dark-500 text-[23px] '>my diary</h1>
