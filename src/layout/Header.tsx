@@ -15,19 +15,19 @@ function Header() {
 
     return (<div className="h-[84px] w-full bg-dark-600 m-auto">
         <div className='w-3/4 h-full m-auto flex justify-between'>
-            <a className='flex items-center' href='#'>
+            <a className='flex items-center' href='/'>
                 <img className='h-[64px] w-[144px]' src={Logo} />
             </a>
             <div className='flex justify-between items-center w-1/2'>
-                <div className='inline-flex text-light mr-4'>
+                <div className='inline-flex text-light hover:text-primary-400 cursor-pointer mr-4'>
                     <img className='h-[32px] w-[32px]' src={Memo} />
-                    <span>自分の記録</span>
+                    <a href="/records">自分の記録</a>
                 </div>
-                <div className='inline-flex text-light mr-4'>
+                <div className='inline-flex text-light hover:text-primary-400 cursor-pointer mr-4'>
                     <img className='h-[32px] w-[32px]' src={Challenge} />
                     <span>チャレンジ</span>
                 </div>
-                <div className='inline-flex text-light mr-4'>
+                <div className='inline-flex text-light hover:text-primary-400 cursor-pointer mr-4'>
                     <img className='h-[32px] w-[32px]' src={Info} />
                     <span>お知らせ</span>
                 </div>
