@@ -1,6 +1,7 @@
 import Hexagon from "../components/Hexagon";
 import LinearButton from "../components/LinearButton";
 import RecordCategory from "../components/RecordCategory";
+import ColumnThumbnail from "../components/ColumnThumbnail";
 
 function TestComponent() {
   return (
@@ -28,6 +29,28 @@ function TestComponent() {
         <RecordCategory name="MY DIARY" description="自分の日記" type="3" />
       </div>
       <br></br>
+      <div className="flex">
+        <ColumnThumbnail
+          name="魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
+          time="2021.05.17  23:25"
+          type="1"
+        />
+        <ColumnThumbnail
+          name="魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
+          time="2021.05.17  23:25"
+          type="2"
+        />
+        <ColumnThumbnail
+          name="魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
+          time="2021.05.17  23:25"
+          type="3"
+        />
+        <ColumnThumbnail
+          name="魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
+          time="2021.05.17  23:25"
+          type="4"
+        />
+      </div>
     </div>
   );
 }
