@@ -6,7 +6,6 @@ import Layout from "../layout";
 function Column() {
   return (
     <Layout>
-
       <div className="Column">
         <div
           className="flex justify-around w-4/6 py-12 flex-wrap"

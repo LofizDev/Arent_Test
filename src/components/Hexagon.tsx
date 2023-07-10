@@ -4,7 +4,7 @@ import linearHexagon from "/assets/linearHexagon.svg";
 interface Iprops {
   name: string,
   type: string,
-  onClick: () => void
+  onClick?: () => void
 }
 function Hexagon(props: Iprops) {
   const { name, type, onClick } = props
