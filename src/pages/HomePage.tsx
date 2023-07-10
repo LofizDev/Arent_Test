@@ -42,7 +42,7 @@ function HomePage() {
               .filter((el) => (active !== "all" ? el.category == active : true))
               .slice(0, expand ? meal.length : 8)
               .map((e) => (
-                <FoodInfo title={e.title} url={e.url} />
+                <FoodInfo key={e.url} title={e.title} url={e.url} />
               ))}
           </div>
           {!expand && (

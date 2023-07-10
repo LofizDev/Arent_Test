@@ -7,6 +7,7 @@ import Info from "../../public/assets/icons/info.svg";
 import Menu from "../../public/assets/icons/menu.svg";
 import Close from "../../public/assets/icons/close.svg";
 import Dropdown from "../components/Dropdown";
+import NoticeNumber from "../components/NoticeNumber";
 
 const ELEMENTS = [
   "自分の記録",
@@ -17,12 +18,14 @@ const ELEMENTS = [
   "設定",
 ];
 
+const NUMBER = 1;
+
 function Header() {
   const [isOpen, setOpen] = useState<boolean>(false);
 
   return (
     <div className="h-[84px] w-full bg-dark-600 m-auto">
-      <div className="w-3/4 h-full m-auto flex justify-between">
+      <div className="md:w-3/4 w-[95%] h-full m-auto flex justify-between">
         <a className="flex items-center" href="/">
           <img className="h-[64px] w-[144px]" src={Logo} />
         </a>
@@ -31,18 +34,20 @@ function Header() {
             <img className="h-[32px] w-[32px]" src={Memo} />
             <NavLink
               to="/records"
-              className={({ isActive }) => (isActive ? "text-primary-400" : "")}
+              className={(isActive) => (isActive ? "text-primary-400 ml-3 lg:block hidden" : "ml-3 lg:block hidden")}
             >
               自分の記録
             </NavLink>
           </div>
           <div className="inline-flex text-light hover:text-primary-400 cursor-pointer mr-4">
             <img className="h-[32px] w-[32px]" src={Challenge} />
-            <span>チャレンジ</span>
+            <span className="lg:block hidden ml-3">チャレンジ</span>
           </div>
           <div className="inline-flex text-light hover:text-primary-400 cursor-pointer mr-4">
+            <NoticeNumber number={NUMBER}>
             <img className="h-[32px] w-[32px]" src={Info} />
-            <span>お知らせ</span>
+            </NoticeNumber>
+            <span className="lg:block hidden ml-3">お知らせ</span>
           </div>
           <div className="ml-4">
             <Dropdown open={isOpen} elements={ELEMENTS}>
