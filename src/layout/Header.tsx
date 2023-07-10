@@ -34,7 +34,7 @@ function Header() {
             <img className="h-[32px] w-[32px]" src={Memo} />
             <NavLink
               to="/records"
-              className={(isActive) => (isActive ? "text-primary-400 ml-3 lg:block hidden" : "ml-3 lg:block hidden")}
+              className={({isActive}) => (isActive ? "text-primary-400 ml-3 lg:block hidden" : "ml-3 lg:block hidden")}
             >
               自分の記録
             </NavLink>
