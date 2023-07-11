@@ -34,22 +34,24 @@ function Records() {
 
     return (
         <Layout>
-            <div className="flex my-[50px] lg:w-[960px] lg:px-0 px-3 w-full justify-between mx-auto">
+            <div className="flex my-[50px] lg:w-[960px] lg:px-0 px-3 w-full justify-between mx-auto scroll-smooth">
                 <div className='grid lg:grid-cols-3 cursor-pointer gap-2 grid-cols-2'>
                     <RecordCategory
                         name="BODY RECORD"
                         description="自分のカラダの記録"
                         type="1"
+                        label='body-record'
                     />
                     <RecordCategory
                         name="MY EXERCISE"
                         description="自分の運動の記録"
                         type="2"
+                        label="my-exercise"
                     />
-                    <RecordCategory name="MY DIARY" description="自分の日記" type="3" />
+                    <RecordCategory name="MY DIARY" description="自分の日記" type="3" label="my-diary" />
                 </div>
             </div>
-            <div className='lg:w-[960px] w-full lg:px-0 px-3 bg-[#2E2E2E] mx-auto '>
+            <div id='body-record' className='lg:w-[960px] w-full lg:px-0 px-3 bg-[#2E2E2E] mx-auto '>
                 <div className='px-5 flex items-center gap-1 py-3'>
                     <span className='font-inter text-[15px] text-white '>BODY <br /> RECORD</span>
                     <p className='text-white font-inter text-[15px] ml-2'>2021.05.21</p>
@@ -64,10 +66,10 @@ function Records() {
                     ))}
                 </div>
             </div>
-            <div className='lg:w-[960px] w-full lg:px-0 mt-[50px] px-3 bg-dark-500 mx-auto'>
+            <div id='my-exercise' className='lg:w-[960px] w-full lg:px-10 mt-[50px] px-2 lg:pb-10 pb-6 bg-dark-500 mx-auto'>
                 <ExerciseList/>
             </div>
-            <div className='lg:w-[960px] w-full mt-[50px] mx-auto'>
+            <div id='my-diary' className='lg:w-[960px] w-full mt-[50px] mx-auto'>
                 <h1 className='uppercase text-dark-500 text-[23px] '>my diary</h1>
                 <div className='lg:grid-cols-4 grid md:px-0 px-3 mx-auto gap-4 grid-cols-2 md:grid-cols-3'>
                     {diaries.slice(0, lastPage).map(e => (

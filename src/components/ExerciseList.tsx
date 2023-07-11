@@ -2,11 +2,11 @@ import data from '../../mock/exercise.json';
 
 function ExerciseList() {
     return <>
-    <div className='px-5 flex items-center gap-1 py-3'>
+    <div className='exercise-list flex items-center gap-1 py-3'>
                     <span className='font-inter text-[15px] text-white '>MY <br /> EXERCISE</span>
                     <p className='text-white font-inter text-[15px] ml-2'>2021.05.21</p>
                 </div>
-    <div className="h-[264px] flex text-light justify-between p-10 overflow-y-scroll">
+    <div className="h-[264px] flex text-light justify-between md:p-8 p-4 overflow-y-scroll w-full">
         <ul className="list-disc w-[45%]">
             {data.exercises.map((item, index) => <li key={index} className="flex justify-between border-b border-b border-gray-400 py-2">
                 <div>
@@ -20,7 +20,7 @@ function ExerciseList() {
                         {item.kcal}kcal
                     </span>
                 </div>
-                <div className="text-primary-300">
+                <div className="text-primary-300 text-[18px]">
                     {item.minute} min
                 </div>
             </li>)}
@@ -39,7 +39,7 @@ function ExerciseList() {
                         {item.kcal}kcal
                     </span>
                 </div>
-                <div className="text-primary-300">
+                <div className="text-primary-300 text-[18px]">
                     {item.minute} min
                 </div>
             </li>)}

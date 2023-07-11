@@ -6,11 +6,12 @@ interface Iprops {
   name: string;
   description: string;
   type: string;
+  label?: string;
 }
 function RecordCategory(props: Iprops) {
   const { name, description, type } = props;
   return (
-    <div className="RecordCategory w-full object-cover h-[288px] bg-yellow-400 p-6">
+    <a href={`#${props.label}`} className="RecordCategory w-full object-cover h-[288px] bg-yellow-400 p-6">
       <div className="relative">
         <img
           src={
@@ -33,7 +34,7 @@ function RecordCategory(props: Iprops) {
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
